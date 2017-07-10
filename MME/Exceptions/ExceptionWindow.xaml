@@ -1,0 +1,25 @@
+﻿<controls:MetroWindow x:Class="MME.Exceptions.ExceptionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MME.Exceptions"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="The Oh No Box" Height="250" ResizeMode="NoResize" Width="450"
+        ShowInTaskbar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Oh No! The Oh No Box appeared!" HorizontalAlignment="Center"
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center"
+               Width="424" FontSize="16" FontWeight="Bold" Margin="10,12" />
+        <TextBox Name="Content" Grid.Row="1" Margin="10" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True"
+                 Background="Transparent" BorderBrush="Transparent" />
+        <Button Content="'Kay" HorizontalAlignment="Center" VerticalContentAlignment="Center" Margin="10,10,10,0"
+                Grid.Row="2" VerticalAlignment="Top" Width="424" Height="35" Click="ButtonBase_OnClick" />
+    </Grid>
+</controls:MetroWindow>
