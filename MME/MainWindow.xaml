@@ -11,7 +11,7 @@
                       MinWidth="1000" MinHeight="600"
                       WindowStartupLocation="CenterScreen"
                       WindowState="Maximized"
-                      Closing="MainWindow_OnClosing"
+                      Closing="MainWindow_OnCloing"
                       ShowIconOnTitleBar="True"
                       Loaded="MainWindow_OnLoaded">
     <Window.CommandBindings>
