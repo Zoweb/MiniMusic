@@ -14,7 +14,7 @@ using MME.Sound.Waves;
 
 namespace MME.Project
 {
-    public static class ProjectFile
+    /*public static class ProjectFile
     {
         public static string CurrentFileLocation;
         public static readonly Version CurrentVersion = new Version(1, 1);
@@ -272,5 +272,5 @@ namespace MME.Project
             stream.Position = 0;
             return stream;
         }
-    }
+    }*/
 }

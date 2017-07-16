@@ -1,43 +1,67 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="project">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="song">
-          <xs:complexType>
-            <xs:attribute name="bpm" type="xs:unsignedByte" use="required" />
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="instruments" minOccurs="1" maxOccurs="1">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element maxOccurs="unbounded" name="instrument">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="pattern">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element maxOccurs="unbounded" name="note">
-                            <xs:complexType>
-                              <xs:attribute name="index" type="xs:unsignedByte" use="required" />
-                              <xs:attribute name="volume" type="xs:decimal" use="required" />
-                              <xs:attribute name="start" type="xs:decimal" use="required" />
-                              <xs:attribute name="length" type="xs:decimal" use="required" />
-                            </xs:complexType>
-                          </xs:element>
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                  <xs:attribute name="type" type="xs:string" use="required" />
-                  <xs:attribute name="name" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-      <xs:attribute name="version" type="xs:string" use="required" />
-    </xs:complexType>
-  </xs:element>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 sp1 (http://www.altova.com) by Sean Joseland (Quality Merchant Services) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="project">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="song">
+					<xs:complexType>
+						<xs:attribute name="bpm" type="xs:unsignedByte" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="instruments">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="instrument" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="pattern">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="note" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="index" type="xs:unsignedByte" use="required"/>
+															<xs:attribute name="volume" type="xs:decimal" use="required"/>
+															<xs:attribute name="start" type="xs:decimal" use="required"/>
+															<xs:attribute name="length" type="xs:decimal" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="effects" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="effect" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="id" type="xs:string" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="type" type="xs:string" use="required"/>
+									<xs:attribute name="name" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="effects">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="effect" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:string" use="required"/>
+									<xs:attribute name="source" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="version" type="xs:token" use="required"/>
+		</xs:complexType>
+	</xs:element>
 </xs:schema>

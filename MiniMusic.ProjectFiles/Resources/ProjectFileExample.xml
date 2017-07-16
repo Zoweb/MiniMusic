@@ -13,6 +13,9 @@
         <note index="24" volume="1" start="5" length="1" />
         <note index="20" volume="1" start="6" length="1" />
       </pattern>
+      <effects>
+        <effect id="LowPass" />
+      </effects>
     </instrument>
     <instrument type="SquareWave" name="Square Wave Arp-ish">
       <pattern>
@@ -26,4 +29,8 @@
       </pattern>
     </instrument>
   </instruments>
+  <effects>
+    <effect id="LowPass" source="lowpass.mmeffect" />
+    <effect id="HighPass" source="highpass.mmeffect" />
+  </effects>
 </project>
