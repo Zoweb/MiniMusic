@@ -4,16 +4,13 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Shapes;
 using Microsoft.Win32;
 using MME.Console;
 using MME.Data;
 using MME.Drawing;
-using MME.Project;
 using MME.Sound;
 using MME.Storage;
-using SplashScreen = MME.Exceptions.SplashScreen;
+using MiniMusic.ProjectFiles;
 
 namespace MME
 {
@@ -100,7 +97,7 @@ namespace MME
             if (result != true) return;
 
             var filename = dialogue.FileName;
-            ProjectFile.LoadProject(filename);
+            //ProjectFile.LoadProject(filename);
 
             Piano.PlayResolution = 4;
             Piano.Bpm = SongData.Bpm;
@@ -119,15 +116,15 @@ namespace MME
             if (result != true) return;
             
             var filename = dialogue.FileName;
-            ProjectFile.SaveProject(filename);
+            //ProjectFile.SaveProject(filename);
         }
 
         private void MenuFileSave_OnClick(object sender, RoutedEventArgs e)
         {
-            if (ProjectFile.CurrentFileLocation == null)
-                MenuFileSaveAs_OnClick(sender, e);
-            else
-                ProjectFile.SaveProject(ProjectFile.CurrentFileLocation);
+            //if (ProjectFile.CurrentFileLocation == null)
+            //    MenuFileSaveAs_OnClick(sender, e);
+            //else
+            //    ProjectFile.SaveProject(ProjectFile.CurrentFileLocation);
         }
 
         public static void ChangeTitle(string newTitle)
@@ -341,6 +338,9 @@ namespace MME
             }
 
             _noteToChange = null;
+
+
+            var prjFile = new ProjectFile("./ProjectFileExample.xml");
         }
 
         private void Sequencer_OnSizeChanged(object sender, SizeChangedEventArgs e)
