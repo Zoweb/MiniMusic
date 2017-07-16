@@ -4,16 +4,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMusic.Editor", "MME\MiniMusic.Editor.csproj", "{5FB00A63-518B-42C3-AF95-C4878B5DD09A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{46B6E8C4-B666-4508-B6A9-980E5BE84212} = {46B6E8C4-B666-4508-B6A9-980E5BE84212}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMusic.Installer", "MiniMusic.Installer\MiniMusic.Installer.csproj", "{292C28DA-0756-4A1F-AE82-5E7AFF51208F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0E10B87A-431A-40C4-B61D-0126A1E646C5}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMusic.WinFormsInstaller", "MiniMusic.WinFormsInstaller\MiniMusic.WinFormsInstaller.csproj", "{7DF41BB9-598C-4318-9467-3D202946CE3C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMusic.License", "MiniMusic.License\MiniMusic.License.csproj", "{A0F9A2D9-85A2-4B1A-AC61-B482DE44832E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMusic.Installer.Version2", "MiniMusic.Installer.Version2\MiniMusic.Installer.Version2.csproj", "{4C1126E8-A32D-49FB-8197-1EF310044115}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMusic.Installer.Version2.Extractor", "MiniMusic.Installer.Version2.Extractor\MiniMusic.Installer.Version2.Extractor.csproj", "{B85F3231-CD7C-4DAD-9CD7-2D458457F54E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMusic.ProjectFiles", "MiniMusic.ProjectFiles\MiniMusic.ProjectFiles.csproj", "{46B6E8C4-B666-4508-B6A9-980E5BE84212}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,26 +26,10 @@ Global
 		{5FB00A63-518B-42C3-AF95-C4878B5DD09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FB00A63-518B-42C3-AF95-C4878B5DD09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FB00A63-518B-42C3-AF95-C4878B5DD09A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{292C28DA-0756-4A1F-AE82-5E7AFF51208F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{292C28DA-0756-4A1F-AE82-5E7AFF51208F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{292C28DA-0756-4A1F-AE82-5E7AFF51208F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{292C28DA-0756-4A1F-AE82-5E7AFF51208F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7DF41BB9-598C-4318-9467-3D202946CE3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DF41BB9-598C-4318-9467-3D202946CE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DF41BB9-598C-4318-9467-3D202946CE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DF41BB9-598C-4318-9467-3D202946CE3C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0F9A2D9-85A2-4B1A-AC61-B482DE44832E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0F9A2D9-85A2-4B1A-AC61-B482DE44832E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0F9A2D9-85A2-4B1A-AC61-B482DE44832E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0F9A2D9-85A2-4B1A-AC61-B482DE44832E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C1126E8-A32D-49FB-8197-1EF310044115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C1126E8-A32D-49FB-8197-1EF310044115}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C1126E8-A32D-49FB-8197-1EF310044115}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C1126E8-A32D-49FB-8197-1EF310044115}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B85F3231-CD7C-4DAD-9CD7-2D458457F54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B85F3231-CD7C-4DAD-9CD7-2D458457F54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B85F3231-CD7C-4DAD-9CD7-2D458457F54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B85F3231-CD7C-4DAD-9CD7-2D458457F54E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B6E8C4-B666-4508-B6A9-980E5BE84212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B6E8C4-B666-4508-B6A9-980E5BE84212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B6E8C4-B666-4508-B6A9-980E5BE84212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B6E8C4-B666-4508-B6A9-980E5BE84212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
